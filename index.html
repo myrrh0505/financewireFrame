@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js'></script>
+     <title>Financial Ratio Grabber</title>
+     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+ 
+</head>
+    
+
+<main>
+<body>
+    <header id='Name'>
+        <h1 id='Name1'>Financial ratio grabber</h1>
+    </header>
+   
+<br>
+<br>
+<br>
+<!--Link for Company Symbol-->
+<div id ='stocklink' >
+    <a class ='link' href='http://eoddata.com/symbols.aspx'>Click here for a link to all company symbols</a>
+</div>
+<br>
+<br>
+
+
+<!--Input Form for Company Symbol-->
+<form>
+<div class="form__group">
+  <input type="text" id="searchTicker" class="form__input" id="name" placeholder="enter a company symbol" required="" />
+  
+</div>
+<br>
+<div class='submitContainer'>
+    <input class = 'form-submit-button' type="submit" value="Get your ratios">
+</form>
+
+</div>
+    <!--Error message-->
+<p class="js-error-message"></p>
+
+<br>
+<br>
+
+
+<!--Final Grade-->
+<section>
+    <div class='finalGrade'>
+
+    </div>
+</section>
+
+
+<!--Current Ratio Section-->
+
+
+<section class='infoContainer'>
+    <div class = 'info'>
+        <p data-toggle="tooltip" title="The current ratio is the company's assets divided by their liabilities. Too low of a number means the company can't pay it's loans, and too high could mean that a company isn't investing its assets properly!" id='currentRatio'>Current Ratio &#9432;</p>
+    </div>
+</section>
+
+
+<section class='chartSection'>
+    <div class = 'container'>
+        <canvas id='myChart'></canvas>
+
+    </div>
+</section>
+
+<section class='gradeSection'>
+    <div class= 'Grade' id='Grade1'>
+
+    </div>
+</section>
+
+
+
+
+<!--Quick Ratio Section-->
+
+<section>
+    <div class = 'info'>
+        <p  data-toggle="tooltip" title="The quick ratio is similar to the current ratio, but it subtracts inventory, leaving a ratio of cash divided by liabilities. This shows how if a company can cover its debts using just cash or liquid items. "id='QuickRatio'>Quick Ratio &#9432;</p>
+    </div>
+</section>
+
+
+
+<section>
+    <div class = 'container'>
+        <canvas id='myChart2'></canvas>
+
+    </div>
+</section>
+
+<section class='gradeSection'>
+    <div class= 'Grade' id='Grade2'>
+
+    </div>
+</section>
+
+<!--Inventory Turnover Section-->
+
+<section>
+    <div class = 'info'>
+        <p  data-toggle="tooltip" title='Inventory Turnover measures how quickly a company is able to move inventory. This shows you how big the market is for this product.'id='InventoryTurnover'>Inventory Turnover Ratio &#9432;</p>
+    </div>
+</section>
+
+
+<section>
+    <div class = 'container'>
+        <canvas id='myChart3'></canvas>
+
+    </div>
+</section>
+
+<section class='gradeSection'>
+    <div  class= 'Grade' id='Grade3'>
+
+    </div>
+</section>
+
+<!--debt to equity section-->
+
+<section>
+    <div class = 'info'>
+        <p data-toggle="tooltip" title='The debt to equity ratio tells you if a company is borrowing more than it can afford. It divides the equity, which is the value of all stocks if it were liquidated. So if the value of debt is greater than the sum value of all stocks, then it could mean a company is borrowing too much. Also keep in mind that debt helps a company grow'  id='Debt-Equity Ratio'>Debt-Equity Ratio &#9432;</p>
+    </div>
+</section>
+
+
+<section >
+    <div class = 'container'>
+        <canvas id='myChart4'></canvas>
+
+    </div>
+</section>
+
+<section class='gradeSection'>
+    <div class= 'Grade' id='Grade4'>
+
+    </div>
+</section>
+
+
+<!--Return on Equity section-->
+
+
+<section>
+    <div class = 'info'>
+        <p data-toggle="tooltip" title='Return on Equity Ratio measures how good a company is at using assets to create profits. It takes the net income(profit) divided by average value of stocks. This can show you how well a company rewards its stockholders 'id='currentRatio'>Return on Equity Ratio &#9432;</p>
+    </div>
+</section>
+
+
+<section>
+    <div class = 'container'>
+        <canvas id='myChart5'></canvas>
+
+    </div>
+</section>
+
+<section class='gradeSection'> 
+    <div class= 'Grade' id='Grade5'>
+
+    </div>
+</section>
+
+<!--Net Profit Margin Section-->
+
+
+<section>
+    <div class = 'info'>
+        <p data-toggle="tooltip" title='Return on Assets ratio measures how good a company is at using its assets to generate profits. It takes the net income(profit) divided by average of value of assets. The higher the ratio the better a company is at making profits. 'id='ReturnOnAssetsRatio'>Net Profit Margin &#9432;</p>
+    </div>
+</section>
+
+
+
+<section>
+    <div class = 'container'>
+        <canvas id='myChart6'></canvas>
+
+    </div>
+</section>
+
+<section class='gradeSection'>
+    <div class= 'Grade' id='Grade6'>
+
+    </div>
+</section>
+
+</main>
+
+<!--JS-->
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="script.js" ></script>
+
+
+    
+</body>
+</html>
